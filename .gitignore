@@ -7,3 +7,4 @@ build/
 sorter
 sorting_visualizer
 *.exe
+compile_commands.json

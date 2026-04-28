@@ -17,7 +17,7 @@ struct Config load_config(const char* path) {
         sscanf(line, "window_w=%d", &config.window_w);
         sscanf(line, "window_h=%d", &config.window_h);
 
-        sscanf(line, "list_length=%d", &config.list_size);
+        sscanf(line, "list_size=%d", &config.list_size);
         sscanf(line, "sort_speed=%d", &config.sort_speed);
 
         sscanf(line, "bg_color=%hhu,%hhu,%hhu",

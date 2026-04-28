@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
 LIBS = -lraylib
-SRC = src/main.c src/app.c
+SRC = source/main.c source/app.c source/config.c
 OUT = build/sorter
 
 all: $(OUT)

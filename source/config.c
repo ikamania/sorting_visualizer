@@ -20,12 +20,12 @@ struct Config load_config(const char* path) {
         sscanf(line, "list_length=%d", &config.list_size);
         sscanf(line, "sort_speed=%d", &config.sort_speed);
 
-        sscanf(line, "bg_color=%d,%d,%d",
+        sscanf(line, "bg_color=%hhu,%hhu,%hhu",
             &config.bg_color.r,
             &config.bg_color.g,
             &config.bg_color.b);
 
-        sscanf(line, "li_color=%d,%d,%d",
+        sscanf(line, "li_color=%hhu,%hhu,%hhu",
             &config.li_color.r,
             &config.li_color.g,
             &config.li_color.b);

@@ -1,12 +1,7 @@
 #ifndef CONFIG_H 
 #define CONFIG_H
 
-
-struct RGB {
-  int r;
-  int g;
-  int b;
-};
+#include <raylib.h>
 
 
 struct Config {
@@ -16,8 +11,8 @@ struct Config {
     int list_size;
     int sort_speed;
 
-    struct RGB bg_color;
-    struct RGB li_color; // list item color
+    struct Color bg_color;
+    struct Color li_color; // list item color
 };
 
 

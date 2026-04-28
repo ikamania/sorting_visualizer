@@ -29,6 +29,9 @@ struct Config load_config(const char* path) {
             &config.li_color.r,
             &config.li_color.g,
             &config.li_color.b);
+
+        config.bg_color.a = 255;
+        config.li_color.a = 255;
     }
     fclose(file);
 

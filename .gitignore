@@ -1,0 +1,9 @@
+build/
+*.out
+
+*.o
+*.obj
+
+sorter
+sorting_visualizer
+*.exe

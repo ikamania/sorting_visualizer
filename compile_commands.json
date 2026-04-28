@@ -1,0 +1,30 @@
+[
+  {
+    "file": "src/main.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "src/main.c",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-o",
+      "build/sorter"
+    ],
+    "directory": "/home/irakli/Documents/sorting_visualizer",
+    "output": "build/sorter"
+  },
+  {
+    "file": "src/app.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "src/app.c",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-o",
+      "build/sorter"
+    ],
+    "directory": "/home/irakli/Documents/sorting_visualizer",
+    "output": "build/sorter"
+  }
+]

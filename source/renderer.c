@@ -1,7 +1,6 @@
 #include "renderer.h"
 #include "config.h"
 #include <raylib.h>
-#include <stdio.h>
 
 
 void draw_bars(int* arr, const struct Config* config) {

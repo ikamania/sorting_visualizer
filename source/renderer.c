@@ -12,7 +12,7 @@ void draw_bars(int* arr, const struct Config* config) {
             i * w,
             config->window_h - arr[i] * h,
             w,
-            h * arr[i],
+            h * arr[i] + 10,
             config->li_color
         );
     }

@@ -10,7 +10,7 @@ $(OUT): $(SRC)
 	mkdir -p build
 	$(CC) $(SRC) $(CFLAGS) $(LIBS) -o $(OUT)
 
-run: $(OUTMake)
+run: $(OUT)
 	./$(OUT)
 
 clean:

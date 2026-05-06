@@ -1,10 +1,22 @@
 #include "pair.h"
+#include "sort.h"
 
 
 void swap(int* x, int* y) {
     int z = *x;
     *x = *y;
     *y = z;
+};
+
+
+void (*get_algorithm(enum Algorithm algorithm))(int* items, int, struct Pair* pair) {
+    switch (algorithm) {
+        case BUBBLE_SORT:
+            return bubble_sort_step;
+        case SELECTION_SORT:
+            return selection_sort_step;
+    }
+    return bubble_sort_step;
 };
 
 
@@ -38,4 +50,9 @@ void bubble_sort_step(int* items, int size, struct Pair* pair) {
 
         apply_state(pair, NORMAL);
     }
+}
+
+
+void selection_sort_step(int* items, int size, struct Pair* pair) {
+    return;
 }

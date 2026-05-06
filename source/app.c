@@ -15,6 +15,9 @@ void run_app(void) {
 
     struct Pair pair = {0, 1, YELLOW, YELLOW, NORMAL};
 
+    void (*sort_function)(int* items, int, struct Pair* pair);
+    sort_function = get_algorithm(config.algorithm);
+
     int FPS = 60;
 
     InitWindow(config.window_w, config.window_h, "Sorting Visualizer");
@@ -30,7 +33,7 @@ void run_app(void) {
         if (FPS == 0) {
             FPS = 60;
             for (int k = 0; k < config.sort_speed; k++) {
-                bubble_sort_step(items, config.list_size, &pair);
+                sort_function(items, config.list_size, &pair);
             }
         } else FPS--;
 

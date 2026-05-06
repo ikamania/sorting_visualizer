@@ -17,7 +17,7 @@ struct Config {
     int list_size;
     int sort_speed;
 
-    enum Algorithm algorithm;
+    int algorithm;
 
     struct Color bg_color;
     struct Color li_color; // list item color

@@ -19,6 +19,7 @@ struct Config load_config(const char* path) {
 
         sscanf(line, "list_size=%d", &config.list_size);
         sscanf(line, "sort_speed=%d", &config.sort_speed);
+        sscanf(line, "algorithm=%d", &config.algorithm);
 
         sscanf(line, "bg_color=%hhu,%hhu,%hhu",
             &config.bg_color.r,

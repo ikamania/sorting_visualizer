@@ -37,4 +37,5 @@ The project includes a `config/config.ini` file that allows customization of the
 - `bg_color` — background RGB color
 - `li_color` — bar RGB color
 - `list_size` — number of elements to sort
+- `sort_speed` — controls animation speed of the sorting visualization
 - `algorithm` — sorting algorithm selection

@@ -20,6 +20,9 @@ void run_app(void) {
 
     int FPS = 60;
 
+    int frame_delay = FPS + 1 - config.sort_speed;
+    int frame_counter = 0;
+
     InitWindow(config.window_w, config.window_h, "Sorting Visualizer");
     SetTargetFPS(FPS);
 
@@ -30,12 +33,11 @@ void run_app(void) {
 
         draw_bars(items, &config, &pair);
 
-        if (FPS == 0) {
-            FPS = 60;
-            for (int k = 0; k < config.sort_speed; k++) {
-                sort_function(items, config.list_size, &pair);
-            }
-        } else FPS--;
+        if (frame_counter == 0) {
+            sort_function(items, config.list_size, &pair);
+
+            frame_counter = frame_delay;
+        } else frame_counter--;
 
         EndDrawing();
     }

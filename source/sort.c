@@ -54,5 +54,36 @@ void bubble_sort_step(int* items, int size, struct Pair* pair) {
 
 
 void selection_sort_step(int* items, int size, struct Pair* pair) {
-    return;
+    static int i = 0;
+    static int j = 0;
+    static int c = 1;
+
+    if (c == size) return;
+
+    if (j == size - c) {
+        if (items[i] > items[j]) swap(&items[i], &items[j]);
+
+        apply_state(pair, SORTED);
+
+        j = 0;
+        i = 0;
+        c++;
+
+        return;
+    }
+
+    if (items[i] < items[j]) {
+        i = j;
+
+        pair->b = -1;
+
+        apply_state(pair, HIGHLIGHT);
+    } else {
+        if (j != size - c) j++;
+
+        pair->b = j;
+        apply_state(pair, HIGHLIGHT);
+    }
+
+    pair->a = i;
 }

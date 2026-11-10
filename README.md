@@ -4,12 +4,14 @@ A **sorting visualizer** written in C that demonstrates how different sorting al
 
 ---
 
+![bubble sort](assets/bubble_sort.gif)
+
+---
+
 ## Requirements
 
 - C compiler (GCC, Clang, etc.)
 - raylib
-
----
 
 ## Usage
 
@@ -21,6 +23,7 @@ cd sorting_visualizer
 ```
 
 2. Build and run the application:
+
 ```bash
 make run
 ```
